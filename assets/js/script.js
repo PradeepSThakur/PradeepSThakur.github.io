@@ -226,7 +226,25 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the filter buttons and the workshops & conferences content
+  var filterButtons = document.querySelectorAll('.filter-item button');
+  var workshopsConferencesContent = document.getElementById('workshops-conferences-content');
 
+  // Initially hide the workshops & conferences content
+  workshopsConferencesContent.style.display = 'none';
+
+  // Add click event listener to each filter button
+  filterButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      // Check if the clicked button is the "Workshops & Conferences" button
+      var isWorkshopsConferencesButton = button.innerText.trim() === 'Workshops & Conferences';
+
+      // Toggle the visibility of the workshops & conferences content
+      workshopsConferencesContent.style.display = isWorkshopsConferencesButton ? 'block' : 'none';
+    });
+  });
+});
 
 
 
