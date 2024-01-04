@@ -1221,6 +1221,10 @@ img {
   
 }
 
+#workshops-conferences-content li::marker {
+  color: white;
+}
+
 
 /*-----------------------------------*\
   #PORTFOLIO
