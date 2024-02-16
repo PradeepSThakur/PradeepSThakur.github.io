@@ -2224,3 +2224,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 .leadership-text { max-width: 700px; }
 
 }
+
+.article-title {
+  font-size: 36px; /* Adjust the font size as needed */
+  text-align: center;
+  color: #333; /* Adjust the color as needed */
+}
+
+.highlight {
+  color: #3498db; /* Highlight color */
+  font-weight: bold; /* Make the highlighted text bold */
+}
