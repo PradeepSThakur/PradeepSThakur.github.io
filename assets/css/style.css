@@ -2144,7 +2144,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -2153,8 +2153,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .main-content {
-    min-width: 75%;
-    width: 75%;
+    min-width: 78%;
+    width: 78%;
     margin: 0;
   }
 
@@ -2218,9 +2218,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * RESUME
 	 */
 
-  .timeline-text { max-width: 700px; }
+  .timeline-text { max-width: 1400px; }
 
 
-.leadership-text { max-width: 700px; }
+.leadership-text { max-width: 1400px; }
 
 }
