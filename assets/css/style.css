@@ -2218,9 +2218,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * RESUME
 	 */
 
-  .timeline-text { max-width: 1400px; }
+  .timeline-text { max-width: 1300px; }
 
 
-.leadership-text { max-width: 1400px; }
+.leadership-text { max-width: 1300px; }
 
 }
