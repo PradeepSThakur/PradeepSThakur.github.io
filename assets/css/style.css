@@ -729,21 +729,26 @@ main {
 .tech-expertise-title { margin-bottom: 20px; }
 
 .tech-expertise-list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0; /* Remove default padding for the list */
+  justify-content: center; /* Center items horizontally */
+  list-style-type: none;
+  padding: 0;
 }
 
 .tech-expertise-item {
-  margin: 15px; /* Adjust margin as needed for spacing between items */
-
+  width: 20%; /* Each item takes up 20% of the container width */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .tech-expertise-item img {
-  max-width: 100px; /* Adjust max-width for the images */
-  max-height: 100px; /* Adjust max-height for the images */
+  max-width: 100%;
+  height: auto;
+}
+
+.tech-expertise-description {
+  margin-top: 5px;
 }
 
 .tech-expertise-description {
