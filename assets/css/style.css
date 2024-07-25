@@ -2105,19 +2105,11 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 1250px screen
  */
 
- @media (min-width: 1250px) {
+@media (min-width: 1250px) {
 
   /**
    * RESET
    */
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-  }
 
   body::-webkit-scrollbar { width: 20px; }
 
@@ -2135,6 +2127,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-button { height: 60px; }
 
+
+
   /**
    * REUSED STYLE
    */
@@ -2143,13 +2137,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   article { min-height: 100%; }
 
+
+
   /**
    * MAIN
    */
 
   main {
-    width: 100%;
-    height: 100%;
+    max-width: 1350px;
+    margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -2157,9 +2153,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .main-content {
-    flex: 1;
+    min-width: 78%;
+    width: 78%;
     margin: 0;
   }
+
+
 
   /**
    * SIDEBAR
@@ -2177,7 +2176,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { width: 175px; }
 
   .info-content .name {
     white-space: nowrap;
@@ -2213,11 +2212,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+
+
   /**
-   * RESUME
-   */
+	 * RESUME
+	 */
 
-  .timeline-text { max-width: 700px; }
+  .timeline-text { max-width: 1300px; }
 
-  .leadership-text { max-width: 700px; }
+
+.leadership-text { max-width: 1300px; }
+
 }
