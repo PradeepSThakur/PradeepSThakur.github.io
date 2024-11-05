@@ -346,7 +346,7 @@ main {
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap'); /* Import a fancier font */
 
 .info-content .title {
-  font-family: 'Playfair Display', serif; /* or try 'Great Vibes' for a more script-like font */
+  font-family: serif; /* or try 'Great Vibes' for a more script-like font */
   color: var(--white-1);
   background: var(--onyx);
   font-size: var(--fs-8);
