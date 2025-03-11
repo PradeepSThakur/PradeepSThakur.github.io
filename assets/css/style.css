@@ -811,39 +811,27 @@ main {
   box-sizing: border-box;
 }
 
+.carousel-container {
+  position: relative;
+  width: 92%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
 .carousel-wrapper {
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: center;
   transition: transform 0.9s ease-in-out;
-  height: 100%; /* Ensures the wrapper takes full height */
 }
 
 .carousel-item {
   min-width: 100%;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Ensures the item takes full height */
-}
-
-.carousel-container {
-  position: relative;
-  width: 92%;
-  height: 400px; /* Adjust this based on your requirement */
-  margin: auto;
-  overflow: hidden;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Ensures the image is properly fitted */
-  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Navigation arrows */
