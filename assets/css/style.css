@@ -821,7 +821,7 @@ main {
 
 .carousel-wrapper {
   display: flex;
-  transition: transform 0.9s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 
 .carousel-item {
@@ -838,7 +838,7 @@ img {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 100%;
   transform: translateY(-50%);
   width: auto;
   padding: 16px;
