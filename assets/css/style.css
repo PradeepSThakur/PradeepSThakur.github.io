@@ -441,29 +441,25 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .fancy-button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 24px;
+  gap: 8px;
+  padding: 8px 14px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Ionicon or SVG icon size */
-.fancy-button ion-icon,
-.fancy-button svg {
+.fancy-button ion-icon {
   font-size: 18px;
-  width: 18px;
-  height: 18px;
 }
 
 /* Google Scholar Gradient */
@@ -476,7 +472,7 @@ main {
   transform: scale(1.05);
 }
 
-/* Twitter/X Gradient */
+/* Twitter Gradient */
 .fancy-button.twitter {
   background: linear-gradient(135deg, #1DA1F2, #0d8ddb);
 }
