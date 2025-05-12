@@ -359,13 +359,6 @@ main {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
  
-.subtitle {
-  font-family: Arial, sans-serif;
-  font-size: 16px; /* optional: adjust as needed */
-  font-weight: normal; /* or bold if you prefer */
-  display: inline-block;
-  margin-top: 5px;
-}
 
 .info_more-btn {
   position: absolute;
@@ -448,20 +441,20 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .fancy-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 14px;
+  padding: 10px 20px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -471,23 +464,24 @@ main {
 
 /* Google Scholar Gradient */
 .fancy-button.scholar {
-  background: linear-gradient(135deg, #4285F4, #34A853);
+  background: linear-gradient(135deg, #1DA1F2, #34A853);
 }
 
 .fancy-button.scholar:hover {
-  background: linear-gradient(135deg, #34A853, #4285F4);
+  background: linear-gradient(135deg, #34A853, #1DA1F2);
   transform: scale(1.05);
 }
 
 /* Twitter Gradient */
 .fancy-button.twitter {
-  background: linear-gradient(135deg, #1DA1F2, #0d8ddb);
+  background: linear-gradient(135deg, #1DA1F2, #34A853);
 }
 
 .fancy-button.twitter:hover {
-  background: linear-gradient(135deg, #0d8ddb, #1DA1F2);
+  background: linear-gradient(135deg, #34A853, #1DA1F2);
   transform: scale(1.05);
 }
+
 
 
 
