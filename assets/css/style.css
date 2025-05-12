@@ -436,30 +436,19 @@ main {
 
 .contact-info address { font-style: normal; }
 
-/* Container to center the whole block */
-.social-container {
+.social-buttons-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   margin-top: 20px;
 }
 
-/* Stack buttons vertically */
-.social-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center buttons horizontally */
-  gap: 12px;
-}
-
-/* Common button styling */
 .fancy-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: 10px;
+  padding: 12px 24px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
@@ -469,8 +458,12 @@ main {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.fancy-button ion-icon {
+/* Ionicon or SVG icon size */
+.fancy-button ion-icon,
+.fancy-button svg {
   font-size: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 /* Google Scholar Gradient */
@@ -483,7 +476,7 @@ main {
   transform: scale(1.05);
 }
 
-/* Twitter Gradient */
+/* Twitter/X Gradient */
 .fancy-button.twitter {
   background: linear-gradient(135deg, #1DA1F2, #0d8ddb);
 }
@@ -492,6 +485,7 @@ main {
   background: linear-gradient(135deg, #0d8ddb, #1DA1F2);
   transform: scale(1.05);
 }
+
 
 
 
