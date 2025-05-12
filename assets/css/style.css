@@ -467,6 +467,7 @@ main {
 /* Wrapper spacing (optional for consistent spacing between list and button) */
 .twitter-button-wrapper {
   margin-top: 10px;
+  display: block;
 }
 
 
