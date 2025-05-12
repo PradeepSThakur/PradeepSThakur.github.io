@@ -448,38 +448,24 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 8px 14px;
   border-radius: 30px;
+  background: linear-gradient(135deg, #4285F4, #34A853); /* Google colors */
+  color: white;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-button:hover {
+  background: linear-gradient(135deg, #34A853, #4285F4);
+  transform: scale(1.05);
 }
 
 .fancy-button ion-icon {
   font-size: 18px;
-}
-
-/* Google Scholar Gradient */
-.fancy-button.scholar {
-  background: linear-gradient(135deg, #1DA1F2, #34A853);
-}
-
-.fancy-button.scholar:hover {
-  background: linear-gradient(135deg, #34A853, #1DA1F2);
-  transform: scale(1.05);
-}
-
-/* Twitter Gradient */
-.fancy-button.twitter {
-  background: linear-gradient(135deg, #1DA1F2, #34A853);
-}
-
-.fancy-button.twitter:hover {
-  background: linear-gradient(135deg, #34A853, #1DA1F2);
-  transform: scale(1.05);
 }
 
 
