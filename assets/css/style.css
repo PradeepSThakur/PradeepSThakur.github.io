@@ -436,37 +436,58 @@ main {
 
 .contact-info address { font-style: normal; }
 
+/* Container to center the whole block */
+.social-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Stack buttons vertically */
 .social-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center; /* center buttons horizontally */
+  gap: 12px;
 }
 
+/* Common button styling */
 .fancy-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 16px;
+  padding: 10px 18px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  background-color: #f0f0f0;
-  color: #333;
+  font-weight: 500;
   transition: background-color 0.3s ease;
 }
 
-.fancy-button:hover {
+/* Scholar button (light theme) */
+.fancy-button.scholar {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.fancy-button.scholar:hover {
   background-color: #e0e0e0;
 }
 
+/* Twitter (X) button (black theme) */
 .fancy-button.twitter {
   background-color: #000;
-  color: white;
+  color: #fff;
 }
 
+.fancy-button.twitter:hover {
+  background-color: #222;
+}
+
+/* Bold X icon */
 .icon-x {
   font-weight: bold;
   font-size: 18px;
