@@ -356,6 +356,7 @@ main {
   padding: 5px 15px;
   border-radius: 8px;
   letter-spacing: 0.4px; /* Add slight letter spacing */
+  line-height: 1.6; /* This adds vertical spacing between lines */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
  
