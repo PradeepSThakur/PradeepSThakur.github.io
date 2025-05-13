@@ -2250,3 +2250,54 @@ textarea.form-input::-webkit-resizer { display: none; }
 .leadership-text { max-width: 1300px; }
 
 }
+
+/* Reset and base setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* Full screen container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 2rem;
+}
+
+/* Content scaling */
+.content {
+  width: 100%;
+  max-width: 90%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Typography and spacing adjustments for large/ultra-wide screens */
+@media (min-width: 1920px) {
+  .content {
+    font-size: 1.5rem;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .content {
+    font-size: 1.8rem;
+    max-width: 70%;
+  }
+}
