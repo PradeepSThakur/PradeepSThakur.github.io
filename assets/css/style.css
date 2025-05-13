@@ -2170,7 +2170,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   main {
     width: 100%;
-    max-width: 1880px;
+    max-width: 1680px;
     margin-inline: auto;
     display: flex;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
