@@ -1923,7 +1923,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: 700px; }
 
-  .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
+  .has-scrollbar::-webkit-scrollbar-button { width: 120px; }
 
 
 
