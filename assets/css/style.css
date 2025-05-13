@@ -2169,9 +2169,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
+    width: 100%;
     max-width: 1550px;
     margin-inline: auto;
     display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     justify-content: center;
     align-items: stretch;
     gap: 25px;
