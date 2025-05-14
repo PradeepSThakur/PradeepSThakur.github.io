@@ -1200,7 +1200,7 @@ img {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  margin-left: auto; /* Ensures it's aligned to the right if extra space */
+  margin-right: auto; /* Ensures it's aligned to the right if extra space */
 }
 
 .project-img img {
