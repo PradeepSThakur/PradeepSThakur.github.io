@@ -862,7 +862,7 @@ img {
   font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(49, 48, 48, 0.39);
   z-index: 2; /* Increased z-index to ensure visibility */
   display: flex;
   align-items: center;
