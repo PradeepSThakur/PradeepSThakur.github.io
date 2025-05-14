@@ -160,71 +160,68 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 
-let currentIndex = 0;
-const items = document.querySelector('.carousel-wrapper');
-const totalItems = document.querySelectorAll('.carousel-item').length;
-
-document.querySelector('.next').addEventListener('click', function () {
-  if (currentIndex < totalItems - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0;
-  }
-  updateCarousel();
-});
-
-document.querySelector('.prev').addEventListener('click', function () {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalItems - 1;
-  }
-  updateCarousel();
-});
-
-function updateCarousel() {
-  const newPosition = -currentIndex * 100 + '%';
-  items.style.transform = 'translateX(' + newPosition + ')';
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   const wrapper = document.querySelector('.carousel-wrapper');
+  const items = document.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
   let currentIndex = 0;
   let isPaused = false;
 
-  function nextSlide() {
-    if (!isPaused) {
-      currentIndex = (currentIndex + 1) % wrapper.children.length;
-      const translateValue = -currentIndex * 100 + '%';
-      wrapper.style.transform = 'translateX(' + translateValue + ')';
+  // Clone the first item and append it to the end
+  const firstClone = items[0].cloneNode(true);
+  wrapper.appendChild(firstClone);
 
-      // Reset to the first item after reaching the last one
-      if (currentIndex === 0) {
-        setTimeout(() => {
-          wrapper.style.transition = 'none';
-          wrapper.style.transform = 'translateX(0)';
-          void wrapper.offsetWidth; // Trigger reflow
-          wrapper.style.transition = 'transform 0.5s ease-in-out';
-        }, 500); // Use the same duration as your transition
-      }
+  function updatePosition(index) {
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    if (isPaused) return;
+
+    currentIndex++;
+    updatePosition(currentIndex);
+
+    // When reaching the clone (i.e., after the last original slide)
+    if (currentIndex === totalItems) {
+      setTimeout(() => {
+        wrapper.style.transition = 'none';
+        currentIndex = 0;
+        updatePosition(currentIndex);
+
+        // Force reflow to apply the transition removal
+        void wrapper.offsetWidth;
+        wrapper.style.transition = 'transform 0.5s ease-in-out';
+      }, 500); // Match the CSS transition duration
     }
   }
 
+  // Apply transition initially
+  wrapper.style.transition = 'transform 0.5s ease-in-out';
+
+  // Auto-slide every 2s
   setInterval(nextSlide, 2000);
 
   // Pause on click
-  const items = document.querySelectorAll('.carousel-item');
-
-  items.forEach(item => {
+  const allItems = document.querySelectorAll('.carousel-item');
+  allItems.forEach(item => {
     item.addEventListener('click', function () {
       isPaused = !isPaused;
-      if (!isPaused) {
-        // Resume transitioning
-        nextSlide();
-      }
     });
   });
+
+  // Manual navigation
+  document.querySelector('.next').addEventListener('click', function () {
+    if (!isPaused) isPaused = true;
+    nextSlide();
+  });
+
+  document.querySelector('.prev').addEventListener('click', function () {
+    if (!isPaused) isPaused = true;
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updatePosition(currentIndex);
+  });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
   // Get the filter buttons and the workshops & conferences content
