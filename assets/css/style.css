@@ -1163,12 +1163,10 @@ img {
 
 .publication-container {
   display: flex;
-  justify-content: space-between; /* Ensures text on left, image on right */
-  align-items: center;
-  flex-wrap: wrap; /* Prevent layout break on smaller screens */
+  flex-direction: row; /* Align content in a row */
   width: 100%;
   padding: 15px;
-  gap: 20px;
+  gap: 25px; /* Space between image and info */
 }
 
 .publication-info {
@@ -1197,9 +1195,8 @@ img {
 }
 
 .project-img {
-  flex-shrink: 0; /* Prevent image from shrinking */
-  width: 300px;
-  height: 300px;
+  flex: 0 0 300px; /* Increased width for the image */
+  height: 300px; /* Increased height for the image */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
