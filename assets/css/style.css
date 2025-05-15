@@ -1199,7 +1199,7 @@ img {
   height: 300px; /* Increased height for the image */
   border-radius: 12px;
   overflow: hidden;
-  position: relative;
+  position: left;
 }
 
 .project-img img {
