@@ -1166,7 +1166,7 @@ img {
   flex-direction: row; /* Align content in a row */
   width: 100%;
   padding: 15px;
-  gap: 20px; /* Space between image and info */
+  gap: 55px; /* Space between image and info */
 }
 
 .publication-info {
@@ -1199,7 +1199,7 @@ img {
   height: 300px; /* Increased height for the image */
   border-radius: 12px;
   overflow: hidden;
-  position: left;
+  position: relative;
 }
 
 .project-img img {
