@@ -1166,7 +1166,7 @@ img {
   flex-direction: row; /* Align content in a row */
   width: 100%;
   padding: 15px;
-  gap: 35px; /* Space between image and info */
+  gap: 20px; /* Space between image and info */
 }
 
 .publication-info {
