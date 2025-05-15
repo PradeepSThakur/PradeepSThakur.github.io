@@ -1195,8 +1195,8 @@ img {
 }
 
 .project-img {
-  flex: 0 0 500px; /* Increased width for the image */
-  height: 500px; /* Increased height for the image */
+  flex: 0 0 300px; /* Increased width for the image */
+  height: 300px; /* Increased height for the image */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
