@@ -1167,7 +1167,6 @@ img {
   align-items: flex-start;
   width: 100%;
   padding: 15px;
-  gap: 0; /* Remove this if you're using spacer */
 }
 
 .flex-spacer {
