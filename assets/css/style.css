@@ -1203,8 +1203,10 @@ img {
 .project-img {
   flex: 0 0 300px; /* Increased width for the image */
   height: 300px; /* Increased height for the image */
+  flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
+  margin-left: auto;
   position: relative;
 }
 
