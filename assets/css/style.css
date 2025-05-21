@@ -1182,6 +1182,11 @@ img {
   margin-bottom: 10px;
 }
 
+.title-spacer {
+  display: inline-block;
+  width: calc(100% - 280px); /* Leave space for the image */
+}
+
 .project-list-text {
   font-size: 16px;
   color: #dcdcdc; /* Light white color for description text */
