@@ -1163,14 +1163,10 @@ img {
 
 .publication-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: row; /* Align content in a row */
   width: 100%;
   padding: 15px;
-}
-
-.flex-spacer {
-  flex-grow: 1;
+  gap: 55px; /* Space between image and info */
 }
 
 .publication-info {
@@ -1202,7 +1198,6 @@ img {
 .project-img {
   flex: 0 0 300px; /* Increased width for the image */
   height: 300px; /* Increased height for the image */
-  flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
