@@ -1163,10 +1163,11 @@ img {
 
 .publication-container {
   display: flex;
-  flex-direction: row; /* Align content in a row */
-  width: 100%;
+  justify-content: space-between; /* KEY PART */
+  align-items: flex-start;
   padding: 15px;
-  gap: 55px; /* Space between image and info */
+  width: 100%;
+  gap: 0; /* Optional if you don't want big gap */
 }
 
 .publication-info {
