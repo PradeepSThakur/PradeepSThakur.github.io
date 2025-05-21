@@ -1197,11 +1197,13 @@ img {
 }
 
 .project-img {
-  flex: 0 0 300px; /* Increased width for the image */
-  height: 300px; /* Increased height for the image */
+  flex-shrink: 0;         /* Prevent shrinking */
+  width: 300px;
+  height: 300px;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+  margin-left: auto;      /* Push image to the far right */
 }
 
 .project-img img {
