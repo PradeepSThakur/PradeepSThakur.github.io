@@ -1163,11 +1163,10 @@ img {
 
 .publication-container {
   display: flex;
-  justify-content: space-between; /* Push content to left and right edges */
-  align-items: center;
+  flex-direction: row; /* Align content in a row */
   width: 100%;
   padding: 15px;
-  gap: 55px; /* Optional: Adjust spacing between text and image */
+  gap: 55px; /* Space between image and info */
 }
 
 .publication-info {
@@ -1197,13 +1196,11 @@ img {
 }
 
 .project-img {
-  flex-shrink: 0;         /* Prevent shrinking */
-  width: 300px;
-  height: 300px;
+  flex: 0 0 300px; /* Increased width for the image */
+  height: 300px; /* Increased height for the image */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  margin-left: auto;      /* Push image to the far right */
 }
 
 .project-img img {
@@ -1216,12 +1213,6 @@ img {
 .project-item:hover .project-img img {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
-
-.project-item.active {
-  display: flex;
-  width: 100%;
-}
-
 
 /* Center the eye icon in the middle of the image */
 .project-item .project-item-icon-box {
