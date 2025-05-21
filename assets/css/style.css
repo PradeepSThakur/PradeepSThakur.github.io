@@ -1164,8 +1164,9 @@ img {
 .publication-container {
   display: flex;
   flex-direction: row; /* Align content in a row */
+  justify-content: space-between;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   gap: 55px; /* Space between image and info */
 }
 
