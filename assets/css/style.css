@@ -1302,7 +1302,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .toggle-header:hover {
