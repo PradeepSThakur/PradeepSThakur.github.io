@@ -243,6 +243,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+function toggleSection(id) {
+    const content = document.getElementById(id);
+    const arrow = document.getElementById('arrow-' + id);
+    const isVisible = content.style.display === 'block';
+    content.style.display = isVisible ? 'none' : 'block';
+    arrow.classList.toggle('rotate', !isVisible);
+  }
 
 
 
