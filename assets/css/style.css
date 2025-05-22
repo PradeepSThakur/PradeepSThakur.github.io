@@ -574,7 +574,7 @@ main {
 }
 
 .service-icon-box img {
-  max-width: 60px; /* Controls icon size */
+  max-width: 100px; /* Controls icon size */
   height: auto;
   display: block;
   margin: 0 auto;
