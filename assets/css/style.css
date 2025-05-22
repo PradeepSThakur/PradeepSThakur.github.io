@@ -1275,12 +1275,6 @@ img {
   color: rgb(252, 206, 81);
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #3b3b3b;
-  padding: 20px;
-  color: #333;
-}
 
 .conference-section {
   background: #424141;
@@ -1291,11 +1285,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-h2 {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
-}
 
 .toggle-header {
   font-size: 18px;
