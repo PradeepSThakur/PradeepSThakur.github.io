@@ -797,6 +797,11 @@ main {
   margin-top: 5px; /* Adjust margin-top for spacing between image and text */
   line-height: 1.2;
   text-align: center;
+  transition: color 0.3s ease; /* Optional: smooth color transition for text on hover */
+}
+
+.tech-expertise-item:hover .tech-expertise-description {
+  color: var(--accent-color); /* Optional: change text color on hover */
 }
 
 
