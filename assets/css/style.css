@@ -782,13 +782,7 @@ main {
 
 .tech-expertise-item {
   margin: 40px; /* Adjust margin as needed for spacing between items */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  cursor: pointer; /* Show pointer cursor on hover */
-}
 
-.tech-expertise-item:hover {
-  transform: scale(1.1); /* Slightly enlarge the item */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 .tech-expertise-item img {
@@ -842,7 +836,10 @@ main {
   transition: var(--transition-1); 
 }
 
-.clients-item img:hover
+.clients-item img:hover{
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
 
 
 /**
