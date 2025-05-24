@@ -815,7 +815,9 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.clients {
+  margin-bottom: 15px;
+}
 
 .clients-list {
   display: flex;
@@ -839,10 +841,14 @@ main {
 
 .clients-item img {
   width: 100%;
-  transition: var(--transition-1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
-.clients-item img:hover
+.clients-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
 
 
 /**
