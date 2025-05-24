@@ -782,7 +782,8 @@ main {
 
 .tech-expertise-item {
   margin: 40px; /* Adjust margin as needed for spacing between items */
-
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
 .tech-expertise-item img {
