@@ -1136,7 +1136,7 @@ img {
 .filter-select.active .select-icon { transform: rotate(0.5turn); }
 
 .select-list {
-  background: var(--eerie-black-1); 
+  background: var(--eerie-black-2);
   position: absolute;
   top: calc(100% + 6px);
   width: 100%;
@@ -1157,7 +1157,7 @@ img {
 }
 
 .select-item button {
-  background: var(--eerie-black-1);
+  background: var(--eerie-black-2);
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -1167,7 +1167,7 @@ img {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-1: hsl(240, 2%, 20%); }
+.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
 
 .project-list {
   display: flex;
