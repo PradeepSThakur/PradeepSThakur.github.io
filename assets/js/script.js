@@ -212,7 +212,22 @@ document.addEventListener('DOMContentLoaded', function () {
   // Manual navigation
   document.querySelector('.next').addEventListener('click', function () {
     if (!isPaused) isPaused = true;
-    nextSlide();
+
+    currentIndex++;
+    updatePosition(currentIndex);
+
+    // Handle immediate reset after reaching clone
+    if (currentIndex === totalItems) {
+      setTimeout(() => {
+        wrapper.style.transition = 'none';
+        currentIndex = 0;
+        updatePosition(currentIndex);
+
+        // Force reflow to apply the transition removal
+        void wrapper.offsetWidth;
+        wrapper.style.transition = 'transform 0.5s ease-in-out';
+      }, 500); // Match the CSS transition duration
+    }
   });
 
   document.querySelector('.prev').addEventListener('click', function () {
@@ -221,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updatePosition(currentIndex);
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
