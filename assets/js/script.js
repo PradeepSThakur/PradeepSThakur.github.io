@@ -79,7 +79,6 @@ for (let i = 0; i < selectItems.length; i++) {
 function getVisibleFilterItems() {
   const activePage = document.querySelector("[data-page].active");
 if (!activePage) return;  // just in case no page is active
-
 const filterItems = activePage.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
