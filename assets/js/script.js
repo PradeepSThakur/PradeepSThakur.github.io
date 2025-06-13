@@ -268,4 +268,4 @@ function toggleSection(id) {
     content.style.display = isVisible ? 'none' : 'block';
     arrow.classList.toggle('rotate', !isVisible);
   }
-}
+
