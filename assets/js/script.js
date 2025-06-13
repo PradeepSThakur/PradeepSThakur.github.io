@@ -75,11 +75,12 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
-/// filter variables
+// filter variables
 function getVisibleFilterItems() {
   const activePage = document.querySelector("[data-page].active");
-if (!activePage) return;  // just in case no page is active
-const filterItems = activePage.querySelectorAll("[data-filter-item]");
+  if (!activePage) return [];
+  return activePage.querySelectorAll("[data-filter-item]");
+}
 
 const filterFunc = function (selectedValue) {
   const filterItems = getVisibleFilterItems();
@@ -94,6 +95,7 @@ const filterFunc = function (selectedValue) {
     }
   }
 };
+
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
