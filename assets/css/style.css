@@ -994,6 +994,36 @@ img {
 }
 
 
+/* Scoped only for Research Experience */
+.research-experience .timeline-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+}
+
+.research-experience .timeline-subheader {
+  display: flex;
+  justify-content: space-between;
+  color: goldenrod;
+  font-style: italic;
+}
+
+.research-experience .timeline-subheader .institute,
+.research-experience .timeline-subheader .location {
+  color: goldenrod;
+}
+
+.research-experience .timeline-subheader a.institute {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.research-experience .timeline-subheader a.institute:hover {
+  text-decoration: underline;
+}
+
+
 /**
  * leadership 
  */
@@ -1557,9 +1587,6 @@ h6 {
 
 
 
-
-
-
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
@@ -1643,7 +1670,6 @@ h6 {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
 
 
 
