@@ -924,11 +924,9 @@ img {
 .article-title { margin-bottom: 30px; }
 
 
-/**
- * education and experience 
- */
-
-.timeline { margin-bottom: 30px; }
+.timeline {
+  margin-bottom: 30px;
+}
 
 .timeline .title-wrapper {
   display: flex;
@@ -942,9 +940,13 @@ img {
   margin-left: 45px;
 }
 
-.timeline-item { position: relative; }
+.timeline-item {
+  position: relative;
+}
 
-.timeline-item:not(:last-child) { margin-bottom: 20px; }
+.timeline-item:not(:last-child) {
+  margin-bottom: 20px;
+}
 
 .timeline-item-title {
   font-size: var(--fs-6);
@@ -980,6 +982,95 @@ img {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
+/* Flex wrapper for logo + details */
+.timeline-entry {
+  display: flex;
+  align-items: flex-start; /* align to top */
+  gap: 15px;
+  padding: 0; /* remove extra top padding */
+  margin-top: -3px; /* lift the entire entry slightly */
+}
+
+.timeline-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 5px; /* ensure logo starts at same top position */
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-logo:hover {
+  transform: scale(1.2); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.timeline-logo img {
+  max-width: 80px;
+  max-height: 80px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-details {
+  flex: 1;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* vertically align */
+  gap: 15px; /* space between name and location */
+  font-weight: bold;
+  margin-bottom: 4px; /* adds space before the degree row */
+}
+
+
+.institute-name a {
+  color: var(--light-gray);
+  font-weight: var(--fw-600);
+  line-height: 1.9;flex: 1; /* take remaining space */
+  display: inline-block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: left center;
+}
+
+.institute-name a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.institute-location {
+  color: var(--vegas-gold);
+  font-weight: normal;
+  flex-shrink: 0; /* prevent shrinking */
+  text-align: right;
+}
+
+.timeline-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* vertically align */
+  gap: 15px;
+  font-size: 0.95em;
+  color: var(--light-gray);
+  margin-bottom: 4px; /* adds space before the degree row */
+}
+
+.degree-name {
+  font-weight: 500;
+  flex: 1; /* take remaining space */
+}
+
+.degree-duration {
+  color: var(--vegas-gold);
+  flex-shrink: 0; /* prevent shrinking */
+  text-align: right;
+}
+
+/* Keep only one definition */
 .timeline-text1 {
   color: var(--light-gray);
   font-weight: var(--fw-600);
@@ -993,8 +1084,7 @@ img {
   line-height: 1.9;
 }
 
-
-/* Scoped only for Research Experience */
+/* Research Experience Only */
 .research-experience .timeline-header {
   display: flex;
   justify-content: space-between;
@@ -1002,25 +1092,110 @@ img {
   color: white;
 }
 
+.research-experience .timeline-header .position,
+.research-experience .timeline-header .duration {
+  color: white;
+}
+
 .research-experience .timeline-subheader {
   display: flex;
   justify-content: space-between;
-  color: goldenrod;
-  font-style: italic;
+  font-style: normal; /* No italic */
 }
 
 .research-experience .timeline-subheader .institute,
-.research-experience .timeline-subheader .location {
-  color: goldenrod;
-}
-
-.research-experience .timeline-subheader a.institute {
+.research-experience .timeline-subheader .location,
+.research-experience .timeline-subheader a.institute,
+.research-experience .timeline-subheader a.institute:link,
+.research-experience .timeline-subheader a.institute:visited,
+.research-experience .timeline-subheader a.institute:active {
+  color: var(--vegas-gold);
   text-decoration: none;
-  color: goldenrod;
+  font-weight: bold; /* Make it bold */
 }
 
 .research-experience .timeline-subheader a.institute:hover {
   text-decoration: underline;
+  color: var(--vegas-gold);
+}
+
+/* key-achievements */
+
+.key-achievements-title {
+  font-size: 0.95rem; /* smaller size */
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.trophy-icon {
+  margin-right: 6px;
+  font-size: 1rem; /* icon size */
+}
+
+.timeline-bullets {
+  list-style: none; /* remove default bullet */
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+.timeline-bullets li {
+  position: relative;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7); /* slightly dull white */
+  padding-left: 18px; /* space for arrow */
+}
+
+.timeline-bullets li::before {
+  content: "★"; /* star bullet */
+  position: absolute;
+  left: 0;
+  color: rgba(234, 229, 90, 0.7); /* slightly dull white */
+  font-size: 0.8rem;
+}
+
+.timeline-intro {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.icon-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-bullets li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+.icon-bullets .icon {
+  flex: 0 0 1.9rem; /* space for icon */
+  text-align: right;
+  margin-left: 0.3rem;  /* moves icon slightly to the right */
+  margin-right: 0.8rem; /* keeps good spacing before text */
+}
+
+.icon-bullets .text {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.80); /* dull white for normal text */
+  font-weight: normal !important;
+}
+
+.icon-bullets .text strong {
+  color: #f0ededfa; /* bright white for heading */
+  font-weight: bold;
+}
+
+.icon-bullets .text .bullet-desc {
+  color: rgba(255, 255, 255, 0.80) !important; /* dull white */
+  font-weight: normal !important;
 }
 
 
