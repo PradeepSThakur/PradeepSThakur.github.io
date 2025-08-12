@@ -1268,6 +1268,85 @@ img {
   line-height: 1.6;
 }
 
+/**
+ * certification
+ */
+
+.certification-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.certification-list li {
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #f9f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.certification-category h4 {
+  color: #fff;          /* white text color */
+  margin-top: 1.5rem;   /* gap above */
+  margin-bottom: 1.0rem; /* gap below */
+}
+
+/* Two-column layout */
+.certification-list.two-columns {
+  columns: 2;
+  column-gap: 3rem;
+}
+
+.highlight-heading {
+  color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.heading-emoji {
+  font-size: 1.4rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.timeline-bullets {
+  list-style: none;
+  padding-left: 1.8em;
+  margin: 0;
+  position: relative;
+}
+
+.timeline-bullets li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #e0dede; /* white text */
+  padding-left: 1.2em;
+}
+
+.timeline-bullets li::before {
+  content: "★"; /* star bullet */
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: rgba(234, 229, 90, 0.7); /* slightly dull yellow */
+  font-size: 0.9rem;
+}
+
+/* Two-column layout */
+.timeline-bullets.two-columns {
+  columns: 2;
+  column-gap: 3rem;
+}
 
 
 /**
