@@ -500,14 +500,80 @@ main {
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
-  padding: 22px 5px;
+  padding: 22px 5px; /* spacing box for each link */
   transition: color var(--transition-1);
+  position: relative;
 }
 
 .navbar-link:hover,
-.navbar-link:focus { color: var(--light-gray-70); }
+.navbar-link:focus {
+  color: var(--light-gray-70);
+}
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active {
+  color: var(--orange-yellow-crayola);
+}
+
+/* Shooting comet line */
+.shooting-star {
+  position: absolute;
+  top: 5px; /* vertical alignment above text */
+  height: 2px;
+  background: linear-gradient(90deg, black, gold, gold, black);
+  border-radius: 50%;
+  box-shadow: 0 0 4px gold, 0 0 8px orange;
+  pointer-events: none;
+  opacity: 1;
+  transition: left 0.6s ease, width 0.6s ease;
+  z-index: 10;
+}
+
+/* Underline glow */
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background: var(--orange-yellow-crayola);
+  box-shadow: 0 0 10px var(--orange-yellow-crayola);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus::after,
+.navbar-link.active::after {
+  width: 60%;
+  left: 20%;
+}
+
+/* Lighting / glow on hover */
+.navbar-link:hover,
+.navbar-link:focus {
+  color: var(--orange-yellow-crayola);
+  transform: translateY(-3px);
+  text-shadow: 0 0 6px var(--orange-yellow-crayola), 0 0 12px var(--orange-yellow-crayola);
+}
+
+/* Active state with persistent glow */
+.navbar-link.active {
+  color: var(--orange-yellow-crayola);
+  font-weight: 600;
+  transform: translateY(-3px);
+  text-shadow: 0 0 1px var(--orange-yellow-crayola), 0 0 02px var(--orange-yellow-crayola);
+}
+
+
+.navbar-link:hover::before {
+  animation: sweep 0.75s forwards;
+}
+
+@keyframes sweep {
+  100% {
+    left: 125%;
+  }
+}
 
 
 
