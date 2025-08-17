@@ -14,7 +14,38 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+// navbar variables
 
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".navbar-link");
+  const comet = document.querySelector(".shooting-star");
+
+  function moveComet(to) {
+    const navbarRect = to.closest(".navbar").getBoundingClientRect();
+    const toRect = to.getBoundingClientRect();
+
+    const targetWidth = toRect.width * 0.8; // comet width ≈ 80% of text width
+    const centerX = toRect.left - navbarRect.left + (toRect.width / 2);
+
+    comet.style.width = targetWidth + "px";
+    comet.style.left = (centerX - targetWidth / 2) + "px";
+  }
+
+  // Place comet at initial active link
+  const initial = document.querySelector(".navbar-link.active");
+  if (initial) moveComet(initial);
+
+  // Animate comet on click
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const current = document.querySelector(".navbar-link.active");
+      if (current) current.classList.remove("active");
+      link.classList.add("active");
+      moveComet(link);
+    });
+  });
+});
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
