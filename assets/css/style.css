@@ -533,7 +533,7 @@ main {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 4px;
+  bottom: 10px; /* ⬅️ was 6px, now higher */
   width: 0;
   height: 2px;
   background: var(--orange-yellow-crayola);
