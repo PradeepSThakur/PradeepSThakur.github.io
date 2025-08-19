@@ -500,6 +500,7 @@ main {
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
+  font-weight: 700; /* Bold text */
   padding: 22px 5px; /* spacing box for each link */
   transition: color var(--transition-1);
   position: relative;
