@@ -470,6 +470,67 @@ main {
   font-size: 18px;
 }
 
+/* social buttons */
+
+.social-buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;  /* push icons to edges */
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 2px;  /* adjust this value for closeness to border */
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #444;
+  color: white;
+  font-size: 16px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-icon.twitter {
+  background: #000000; /* pure black */
+  width: 36px;   /* slightly larger than others */
+  height: 36px;
+}
+.social-icon.twitter svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Brand colors */
+.social-icon.orcid { background: #A6CE39; }
+.social-icon.rg { background: #00CCBB; }
+.social-icon.scholar { background: #4285F4; }
+.social-icon.twitter { background: #000000; }
+.social-icon.linkedin { background: #0077B5; }
+
+.social-icon ion-icon {
+  font-size: 16px;
+  color: white;
+}
+
+/* Copyright styling */
+.copyright {
+  text-align: center;
+  font-size: 14px; /* larger text */
+
+  color: var(--light-gray-70); /* brighter for visibility */
+  margin-top: 15px;
+  padding-bottom: 10px;
+  line-height: 1.7;
+}
 
 
 
