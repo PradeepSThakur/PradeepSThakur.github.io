@@ -2389,10 +2389,134 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .contacts-list { gap: 20px; }
 
-  .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
-  }
+  .contacts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.contact-item {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-info {
+  max-width: calc(100% - 46px);
+  width: 100%; /* force full width of container */
+  overflow-wrap: break-word; /* NEW: allow breaking */
+  word-wrap: break-word;     /* fallback */
+}
+
+.contact-link {
+  display: inline-block;
+  white-space: normal;  /* allow wrapping */
+  word-break: break-word; /* break long strings */
+  overflow-wrap: anywhere; /* allow breaking anywhere */
+}
+
+.contact-title {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contact-info :is(.contact-link, time, address, span) {
+  color: var(--white-2);
+  font-size: var(--fs-7);
+}
+
+.contact-info address { font-style: normal; }
+
+
+
+.fancy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4285F4, #34A853); /* Google colors */
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-button:hover {
+  background: linear-gradient(135deg, #34A853, #4285F4);
+  transform: scale(1.05);
+}
+
+.fancy-button ion-icon {
+  font-size: 18px;
+}
+
+/* social buttons */
+
+.social-buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;  /* push icons to edges */
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 2px;  /* adjust this value for closeness to border */
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #444;
+  color: white;
+  font-size: 16px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-icon.twitter {
+  background: #000000; /* pure black */
+  width: 36px;   /* slightly larger than others */
+  height: 36px;
+}
+.social-icon.twitter svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Brand colors */
+.social-icon.orcid { background: #A6CE39; }
+.social-icon.rg { background: #00CCBB; }
+.social-icon.scholar { background: #4285F4; }
+.social-icon.twitter { background: #000000; }
+.social-icon.linkedin { background: #0077B5; }
+
+.social-icon ion-icon {
+  font-size: 16px;
+  color: white;
+}
+
+/* Copyright styling */
+.copyright {
+  text-align: center;
+  font-size: 14px; /* larger text */
+
+  color: var(--light-gray-70); /* brighter for visibility */
+  margin-top: 15px;
+  padding-bottom: 10px;
+  line-height: 1.7;
+}
 
 
 
