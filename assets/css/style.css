@@ -2260,7 +2260,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
-@media (min-width: 450px) {
+@media (min-width: 350px) {
 
   /**
    * client
@@ -2287,7 +2287,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 580px screen
  */
 
-@media (min-width: 580px) {
+@media (min-width: 450px) {
 
   /**
    * CUSTOM PROPERTY
@@ -2316,14 +2316,14 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 520px;
+    width: 4500px;
     margin-inline: auto;
     padding: 30px;
   }
 
   .article-title {
     font-weight: var(--fw-600);
-    padding-bottom: 15px;
+    padding-bottom: 10px;
   }
 
   .article-title::after {
