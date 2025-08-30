@@ -502,17 +502,41 @@ main {
   font-size: var(--fs-8);
   font-weight: 700; /* Bold text */
   padding: 22px 5px; /* spacing box for each link */
-  transition: color var(--transition-1);
+  transition: 
+    color var(--transition-1), 
+    text-shadow 0.3s ease,
+    transform 0.25s ease; /* smooth scaling */
   position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+
+  /* Subtle base glow */
+  text-shadow:
+    0 0 3px rgba(255, 215, 0, 0.4),
+    0 0 6px rgba(255, 165, 0, 0.4);
+  z-index: 150;
 }
 
-.navbar-link:hover,
-.navbar-link:focus {
-  color: var(--light-gray-70);
+.navbar-link:hover {
+  color: gold;
+  transform: scale(1.1); /* grow on hover */
+  text-shadow:
+    0 0 4px gold,
+    0 0 8px orange,
+    0 0 14px rgba(255, 215, 0, 0.8);
+    z-index: 100;
 }
 
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  color: gold;
+  transform: scale(1.15); /* slightly larger when active */
+  text-shadow:
+    0 0 6px gold,
+    0 0 12px orange,
+    0 0 20px rgba(255, 215, 0, 0.9);
+    z-index: 100;
 }
 
 /* Shooting comet line */
@@ -522,11 +546,27 @@ main {
   height: 2px;
   background: linear-gradient(90deg, black, gold, gold, black);
   border-radius: 50%;
-  box-shadow: 0 0 4px gold, 0 0 8px orange;
+  box-shadow: 0 0 6px gold, 0 0 12px orange;
   pointer-events: none;
   opacity: 1;
   transition: left 0.6s ease, width 0.6s ease;
   z-index: 10;
+}
+
+/* Glowing spotlight beam coming from the comet */
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* start below the comet */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;   /* width of beam */
+  height: 50px;  /* length of beam */
+  background: radial-gradient(ellipse at top, rgba(255, 255, 0, 0.5), rgba(255,140,0,0.1) 70%, transparent 100%);
+  filter: blur(8px);
+  opacity: 1.8;
+  pointer-events: none;
+  z-index: -10; /* behind comet */
 }
 
 /* Underline glow */
@@ -574,7 +614,7 @@ main {
   100% {
     left: 125%;
   }
-}
+}}
 
 
 /*-----------------------------------*\
