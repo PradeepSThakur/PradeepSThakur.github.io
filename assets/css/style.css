@@ -1902,6 +1902,7 @@ img {
   font-weight: bold;
   color: white; /* Set title text to white */
   margin-bottom: 10px;
+  line-height: 1.6;      /* ✅ Increase spacing between lines */
 }
 
 .project-list-text {
