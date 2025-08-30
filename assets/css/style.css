@@ -752,6 +752,26 @@ main {
   animation: glowPulse 2s infinite alternate;
 }
 
+/* Typing effect */
+@keyframes typingName {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Golden glow animation */
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+                 0 0 20px rgba(255, 215, 0, 0.6),
+                 0 0 30px rgba(255, 215, 0, 0.4);
+  }
+  to {
+    text-shadow: 0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 40px #0ff,
+  }
+}
+
 /* Degree line */
 .degree-box {
   max-width: 200px;
@@ -769,28 +789,39 @@ main {
   max-width: 470px;
   margin-right: 1.4rem; 
 }
+
 .hero-subtitle {
   font-size: 1.15rem;
   line-height: 1.6;
   font-weight: bold;
   color: #ddd;
   text-align: right;
-  margin-top: 0.9rem;   /* 🔑 adds gap above subtitle */
+  margin-top: 0.7rem;
+  opacity: 0;
+  transform: translateY(10px); /* small slide up */
+  animation: fadeInFlash 1.2s ease-out forwards;
+  animation-delay: 0.5s; /* delay so it comes after title */
 }
 
-/* Golden glow animation */
-@keyframes glowPulse {
-  from {
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
-                 0 0 20px rgba(255, 215, 0, 0.6),
+/* Flashy fade-in effect */
+@keyframes fadeInFlash {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 
                  0 0 30px rgba(255, 215, 0, 0.4);
   }
-  to {
-    text-shadow: 0 0 10px #0ff,
-      0 0 20px #0ff,
-      0 0 40px #0ff,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: none; /* settle clean */
   }
- }
+}
+
 
 
 /*-----------------------------------*\
