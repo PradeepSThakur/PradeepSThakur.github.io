@@ -1254,6 +1254,7 @@ img {
   display: inline-block;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-origin: left center;
+  font-size: 17px;  /* ✅ set font size here */
 }
 
 .institute-name a:hover {
@@ -1280,6 +1281,7 @@ img {
 
 .degree-name {
   font-weight: 500;
+  font-size: 15px;  /* ✅ set font size here */
   flex: 1; /* take remaining space */
 }
 
