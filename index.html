@@ -184,41 +184,60 @@
 
       <nav class="navbar">
 
-        <ul class="navbar-list">
+       
+  <!-- Nav links -->
+  <ul class="navbar-list" id="nav-links">
+     <li class="navbar-item"><button class="navbar-link active" data-nav-link>Home</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>About</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>Research</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>Publications</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+  </ul>
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
+  <!-- comet effect -->
+  <div class="shooting-star"></div>
+</nav>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
+ <!--
+ - #Home
+      -->
 
-           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Research</button>
-          </li> 
+    <article class="home  active" data-page="home">
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Publications</button>
-          </li>
+        <header>
+          <h2 class="h2 article-title">Home</span></h2>
+        </header>
+     <section class="hero">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="./assets/video/HERO5.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+   <div class="hero-content">
+  <!-- Hello Box -->
+  <div class="glass-box hello-box">
+    <span class="hello">Hello, I am</span>
+  </div>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
+  <!-- Name + Degree in ONE glass box -->
+  <div class="glass-box name-degree-box">
+    <h1 class="name">Pradeep Singh Thakur</h1>
+    <span class="degree">Ph.D. , M.S.(Pharm.)</span>
+  </div>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-        <div class="shooting-star"></div>
-
-      </nav>
-
+  <!-- Subtitle Box -->
+  <div class="subtitle-box">
+    <p class="hero-subtitle">
+      A passionate researcher, developer, & lifelong learner.  
+      I love creating impactful solutions & sharing knowledge.
+    </p>
+  </div>
+</div>
+</article>
 
 
 
