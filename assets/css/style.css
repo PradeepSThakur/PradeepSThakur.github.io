@@ -346,18 +346,18 @@ main {
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap'); /* Import a fancier font */
 
 .info-content .title {
-  font-family: Arial;  /* or try 'Great Vibes' for a more script-like font */
-  color: var(--white-1);
+  font-family: sans-serif;  /* modern Aptos-like font */
+  color: rgba(255, 255, 255, 0.892);
   background: var(--onyx);
-  font-size: var(--fs-8);
-  font-weight: 700; /* Increase font-weight for more impact */
+  font-size: var(--fs-7);
+  font-weight: 500; /* Increase font-weight for more impact */
   width: max-content;
   text-align: center;
   padding: 5px 15px;
   border-radius: 8px;
   letter-spacing: 0.4px; /* Add slight letter spacing */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-   line-height: 1.8;   /* ✅ add this for gap between lines */
+  line-height: 1.6;
 }
 
  
