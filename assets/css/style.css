@@ -2774,6 +2774,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .blog-content { padding: 25px; }
 
+  .project-title {
+  font-size: 10px; /* Adjust the title size */
+  font-weight: bold;
+  color: white; /* Set title text to white */
+  margin-bottom: 10px;
+}
+
+.project-list-text {
+  font-size: 16px;
+  color: #dcdcdc; /* Light white color for description text */
+  line-height: 1.0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+
+
 
 
   /**
