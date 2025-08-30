@@ -2518,7 +2518,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .contact-title {
-  color: var(--light-gray-70);
+  color: var(--white-2);
   font-size: var(--fs-8);
   text-transform: uppercase;
   margin-bottom: 2px;
