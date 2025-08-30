@@ -2406,7 +2406,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     --fs-4: 18px;
     --fs-6: 15px;
     --fs-7: 15px;
-    --fs-8: 12px;
+    --fs-8: 10px;
 
   }
 
@@ -2463,13 +2463,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar.active { max-height: 584px; }
 
-  .sidebar-info { gap: 25px; }
+  .sidebar-info { gap: 20px; }
 
   .avatar-box { border-radius: 30px; }
 
   .avatar-box img { width: 100px; }
 
-  .info-content .name { margin-bottom: 15px; }
+  .info-content .name { margin-bottom: 12px; }
 
   .info-content .title { padding: 5px 18px; }
 
