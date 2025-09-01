@@ -1796,6 +1796,31 @@ img {
   font-size: 18px;
 }
 
+.keywords {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword-btn {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(135deg, #e22d2d77, rgba(240, 3, 94, 0.905));
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Glow effect on hover */
+.keyword-btn:hover {
+  box-shadow: 0 0 12px rgba(180, 173, 75, 0.575), 0 0 20px rgba(224, 179, 0, 0.745);
+  transform: translateY(-1px);
+}
 
 
 /*-----------------------------------*\
@@ -2026,7 +2051,7 @@ img {
   }
 
 
-  
+
 /* Filter Buttons and Dropdown Styles */
 .filter-list {
   display: flex;
