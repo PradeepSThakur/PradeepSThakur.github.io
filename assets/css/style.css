@@ -1949,6 +1949,84 @@ img {
   z-index: 1;
 }
 
+
+/* Citation text */
+/* Button row inside publication container */
+.button-row {
+  display: flex;
+  justify-content: space-between; /* left and right */
+  align-items: center;
+  margin-top: auto;  /* pushes buttons to the bottom */
+  padding-top: 12px;
+}
+
+/* Make publication-info a controlled column flex container */
+.publication-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;    /* keep items left-aligned */
+}
+
+/* Prevent everything except the button row from growing/shrinking */
+.publication-info > *:not(.button-row) {
+  flex: 0 0 auto;   /* do not grow or shrink, keep natural height */
+}
+
+/* Tight, consistent spacing for title / meta / authors */
+.project-title {
+  margin: 0 0 4px 0;   /* title bottom gap */
+}
+.project-category,
+.project-list-text {
+  margin: 4px 0;       /* small equal gaps for both lines */
+  line-height: 1.5;
+}
+
+/* Pin the two buttons to the bottom of the .publication-info column */
+.button-row {
+  margin-top: auto;            /* pushes this row to bottom */
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Ensure image stays inside its fixed box and doesn't push heights around */
+.publication-container { align-items: start; }
+.project-img {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Optional debug outlines — remove after checking */
+.publication-info > * { /* remove or comment out once fixed */
+  /* outline: 1px dashed rgba(255,255,255,0.06); */
+}
+
+.project-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.4s ease;
+  transform-origin: left center; /* ✅ Zooms out to the right */
+}
+
+.project-title a:hover {
+  transform: scale(1.1); /* zooms toward right side */
+  text-shadow: 0 0 8px gold, 0 0 16px goldenrod, 0 0 24px gold;
+}
+
+.fancy-button.glow {
+    box-shadow: 0 0 10px gold, 0 0 20px goldenrod, 0 0 30px gold;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+
+  
 /* Filter Buttons and Dropdown Styles */
 .filter-list {
   display: flex;
