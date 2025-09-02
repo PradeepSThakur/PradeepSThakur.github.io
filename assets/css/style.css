@@ -827,7 +827,108 @@ main {
 }
 
 
+.stats-section {
+  background: hsl(240, 2%, 12%);             
+  padding: 40px 20px;            /* ⬅ extra side padding prevents clipping */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;             /* ✅ keep in one row */
+  overflow-x: auto;              /* ✅ scroll if too many */
+  overflow-y: visible;           /* ✅ prevent clipping glow */
+  text-align: center;
+  color: #fff;
+  scrollbar-width: none;         /* hide scrollbar (Firefox) */
+}
 
+.stats-section::-webkit-scrollbar {
+  display: none;                 /* hide scrollbar (Chrome/Safari) */
+}
+
+.stat-box {
+  background: #0d0d0d;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;                /* ✅ prevent shrinking */
+  z-index: 1;
+}
+
+/* Sizes */
+.stat-box.small {
+  width: 153px;                  /* fixed size for numbers */
+}
+
+.stat-box.large {
+  width: 225px;                  /* fixed size for text-heavy boxes */
+}
+
+/* Hover: bounce + glow + wave */
+.stat-box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.7);
+  background: linear-gradient(
+    270deg,
+    #1a1a1a,
+    #f97316,
+    #ff4d4d,
+    #1a1a1a
+  );
+  background-size: 400% 400%;
+  animation: colorWave 6s ease infinite, boxBounce 0.6s ease;
+  z-index: 5;
+}
+
+/* Box bounce */
+@keyframes boxBounce {
+  0%   { transform: translateY(0) scale(1); }
+  30%  { transform: translateY(-12px) scale(1.05); }
+  60%  { transform: translateY(-6px) scale(1.03); }
+  100% { transform: translateY(-10px) scale(1.05); }
+}
+
+/* Color wave */
+@keyframes colorWave {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Icon continuous animation (bounce + glow) */
+.stat-box .icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #f97316;
+  display: inline-block;
+  animation: iconBounce 2s infinite ease-in-out, glow 2s infinite ease-in-out;
+}
+
+/* Icon bounce */
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Icon glow */
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 6px rgba(249, 115, 22, 0.6); }
+  50% { text-shadow: 0 0 14px rgba(249, 115, 22, 1); }
+}
+
+/* Title */
+.stat-box h2 {
+  color: #f97316;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+/* Subtitle */
+.stat-box p {
+  font-size: 14px;
+  color: #ccc;
+}
 
 /*-----------------------------------*\
   #ABOUT
