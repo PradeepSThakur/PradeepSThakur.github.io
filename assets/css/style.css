@@ -826,7 +826,6 @@ main {
   }
 }
 
-
 .stats-section {
   background: hsl(240, 2%, 12%);             
   padding: 40px 20px;            /* ⬅ extra side padding prevents clipping */
@@ -929,6 +928,8 @@ main {
   font-size: 14px;
   color: #ccc;
 }
+
+
 
 /*-----------------------------------*\
   #ABOUT
@@ -2126,11 +2127,6 @@ img {
   height: 300px;
   margin: 0;
   flex-shrink: 0;
-}
-
-/* Optional debug outlines — remove after checking */
-.publication-info > * { /* remove or comment out once fixed */
-  /* outline: 1px dashed rgba(255,255,255,0.06); */
 }
 
 .project-title a {
