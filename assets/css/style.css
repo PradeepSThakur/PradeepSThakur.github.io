@@ -929,6 +929,115 @@ main {
   color: #ccc;
 }
 
+/* Recent publication */
+
+/* ---------- Recent Publications carousel (scoped) ---------- */
+/* Recent Publications Carousel */
+.recent-carousel {
+  position: relative;
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+/* Track */
+.recent-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+/* Slide (outer layer background) */
+.recent-slide {
+  background-color: transparent; /* ✅ no extra color */
+  min-width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Inner container (transparent, just holds content) */
+.recent-publication-container {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  background-color: transparent; /* ✅ no extra color */
+  padding: 0;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+/* Image styling - increased slightly */
+.recent-publication-container .project-img {
+  flex: 0 0 280px; /* increased from 220px */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-publication-container .project-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text info next to image - slightly pushed right */
+.recent-publication-container .publication-info {
+  flex: 1;
+  margin-left: 10px;   /* small push to the right */
+  color: #fff;
+}
+
+/* Title link */
+.recent-publication-container .publication-info h3 a {
+  color: #f0f2f3;
+  text-decoration: none;
+}
+
+.recent-publication-container .publication-info h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Category & authors */
+.recent-publication-container .project-category,
+.recent-publication-container .project-list-text {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+/* Buttons row */
+.recent-publication-container .button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Navigation arrows */
+.recent-btn.prev,
+.recent-btn.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.6);
+  border: none;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.recent-btn.prev { left: 05px; }
+.recent-btn.next { right: 05px; }
+
+.recent-btn:hover {
+  background-color: rgba(0,0,0,0.85);
+}
 
 
 /*-----------------------------------*\
