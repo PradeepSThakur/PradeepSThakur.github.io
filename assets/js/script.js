@@ -300,3 +300,110 @@ function toggleSection(id) {
     arrow.classList.toggle('rotate', !isVisible);
   }
 
+  /* Simple responsive click-carousel (no external lib) */
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.querySelector('.recent-publications');
+  if (!root) return;
+
+  const carousel = root.querySelector('.carousel');
+  const viewport = carousel.querySelector('.carousel-viewport');
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+  // determine gap (CSS gap)
+  const style = getComputedStyle(track);
+  const gap = parseFloat(style.gap) || 20;
+
+  // breakpoints for slides per view
+  function getSlidesPerView() {
+    const w = viewport.clientWidth;
+    if (w >= 1200) return 4;
+    if (w >= 900) return 3;
+    if (w >= 640) return 2;
+    return 1;
+  }
+
+  let slidesPerView = getSlidesPerView();
+  let currentIndex = 0;
+
+  // set slide widths based on viewport and slidesPerView
+  function setWidths() {
+    slidesPerView = getSlidesPerView();
+    const available = viewport.clientWidth - (gap * (slidesPerView - 1));
+    const slideW = Math.floor(available / slidesPerView);
+    slides.forEach(s => { s.style.width = slideW + 'px'; });
+    // adjust index bounds
+    if (currentIndex > Math.max(0, slides.length - slidesPerView)) {
+      currentIndex = Math.max(0, slides.length - slidesPerView);
+    }
+    update();
+  }
+
+  function update() {
+    const slideEl = slides[0];
+    const slideWidth = slideEl ? slideEl.getBoundingClientRect().width : 0;
+    const offset = currentIndex * (slideWidth + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+
+    // disable buttons if at ends (or hide)
+    prevBtn.disabled = currentIndex <= 0;
+    nextBtn.disabled = currentIndex >= Math.max(0, slides.length - slidesPerView);
+
+    // hide buttons when not needed
+    if (slides.length <= slidesPerView) {
+      prevBtn.classList.add('hidden');
+      nextBtn.classList.add('hidden');
+    } else {
+      prevBtn.classList.remove('hidden');
+      nextBtn.classList.remove('hidden');
+    }
+  }
+
+  prevBtn.addEventListener('click', function () {
+    currentIndex = Math.max(0, currentIndex - 1);
+    update();
+  });
+  nextBtn.addEventListener('click', function () {
+    currentIndex = Math.min(slides.length - slidesPerView, currentIndex + 1);
+    update();
+  });
+
+  // copy citation logic
+  root.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async function () {
+      const citation = btn.dataset.citation || '';
+      try {
+        await navigator.clipboard.writeText(citation);
+        btn.classList.add('copied');
+        btn.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon><span>Copied</span>';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = '<ion-icon name="copy-outline"></ion-icon><span>Copy Citation</span>';
+        }, 1400);
+      } catch (e) {
+        console.warn('Copy failed', e);
+      }
+    });
+  });
+
+  // resize observer / window
+  let resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setWidths, 120);
+  });
+
+  // initial sizing
+  setWidths();
+
+  // keyboard support: left / right arrows when focused in section
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevBtn.click();
+    if (e.key === 'ArrowRight') nextBtn.click();
+  });
+
+  // make section focusable for keyboard navigation
+  root.tabIndex = 0;
+});
