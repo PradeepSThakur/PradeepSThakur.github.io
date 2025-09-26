@@ -1337,7 +1337,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for 
 /**
  * #clients 
  */
-
+.clients { margin-top: 40px; /* optional extra spacing */}
 .clients { margin-bottom: 15px; }
 
 .clients-list {
