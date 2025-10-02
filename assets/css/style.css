@@ -688,8 +688,8 @@ main {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100%;
-  min-height: 75vh;
+  width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   border-radius: 12px;
 }
