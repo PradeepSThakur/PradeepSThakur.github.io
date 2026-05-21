@@ -88,10 +88,42 @@
           <p class="title"></centre>Senior Researcher<br>Nanotechnology</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+<!-- Social Links -->
+<div class="social-buttons-container">
+  
 
-          <ion-icon name="chevron-down"></ion-icon>
+  <!-- Google Scholar -->
+  <a href="https://scholar.google.com/citations?user=77nnhCIAAAAJ&hl=en&oi=ao" class="social-icon scholar" target="_blank">
+    <ion-icon name="school-outline"></ion-icon>
+  </a>
+
+  <!-- ORCID -->
+  <a href="https://orcid.org/0000-0001-6264-4889" class="social-icon orcid" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" height="16" alt="ORCID">
+  </a>
+
+  <!-- Twitter (X) -->
+  <a href="https://x.com/TheNanoAlkemist" class="social-icon twitter" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16">
+      <path d="M13.06 10.67 20.12 2h-1.82l-6 7.17L7.24 2H2l7.45 10.63L2 22h1.82l6.3-7.53L16.76 22H22l-8.94-11.33zM11.5 13.06l-.73-.99-5.8-8.04h1.84l4.63 6.41.73.99 6.16 8.52h-1.84l-5.99-8.89z"/>
+    </svg>
+  </a>
+
+    <!-- ResearchGate -->
+  <a href="https://www.researchgate.net/profile/YourName" class="social-icon rg" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" width="16" height="16" alt="ResearchGate">
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/thenanoalchemist/" class="social-icon linkedin" target="_blank">
+    <ion-icon name="logo-linkedin"></ion-icon>
+  </a>
+</div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Menu</span>
+
+          <ion-icon name="menu-outline"></ion-icon>
         </button>
 
       </div>
@@ -163,42 +195,8 @@
 
         <div class="separator"></div>
 
-<!-- Social Links -->
-<div class="social-buttons-container">
-  
-
-  <!-- Google Scholar -->
-  <a href="https://scholar.google.com/citations?user=77nnhCIAAAAJ&hl=en&oi=ao" class="social-icon scholar" target="_blank">
-    <ion-icon name="school-outline"></ion-icon>
-  </a>
-
-  <!-- ORCID -->
-  <a href="https://orcid.org/0000-0001-6264-4889" class="social-icon orcid" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="16" height="16" alt="ORCID">
-  </a>
-
-  <!-- Twitter (X) -->
-  <a href="https://x.com/TheNanoAlkemist" class="social-icon twitter" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16">
-      <path d="M13.06 10.67 20.12 2h-1.82l-6 7.17L7.24 2H2l7.45 10.63L2 22h1.82l6.3-7.53L16.76 22H22l-8.94-11.33zM11.5 13.06l-.73-.99-5.8-8.04h1.84l4.63 6.41.73.99 6.16 8.52h-1.84l-5.99-8.89z"/>
-    </svg>
-  </a>
-
-    <!-- ResearchGate -->
-  <a href="https://www.researchgate.net/profile/YourName" class="social-icon rg" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" width="16" height="16" alt="ResearchGate">
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/thenanoalchemist/" class="social-icon linkedin" target="_blank">
-    <ion-icon name="logo-linkedin"></ion-icon>
-  </a>
-</div>
 
 <div class="separator"></div> <!-- ✅ now this will show properly -->
-
-  <!-- Copyright -->
-  <p class="copyright">© 2025 Pradeep Singh Thakur <br> All Rights Reserved</p>
 
 </div>
     </aside>
@@ -1013,19 +1011,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <img src="./assets/images/Research.png" alt="design icon" width="40">
+              <ion-icon name="flask-outline"></ion-icon>
             </div>
 
            <h3 class="h3">Research Experience</h3>
-</div>
+          </div>
 
 <ol class="timeline-list research-experience">
 
   <li class="timeline-item">
-    <div class="timeline-header">
-      <span class="position" style="color: white;"> Senior Research Fellow</span>
-      <span class="duration" style="color: white;">July 2018 — Present</span>
-    </div>
+    <div class="timeline-entry">
+      <a href="https://iitr.ac.in/Centres/Centre%20for%20Nanotechnology/Home.html" target="_blank">
+        <img class="timeline-logo" src="./assets/images/logo-3-color.png" alt="IIT Roorkee Logo">
+      </a>
+      <div class="timeline-info">
+        <div class="timeline-header">
+          <span class="position" style="color: white; font-size: 1.1em; font-weight: bold;"> Senior Research Fellow</span>
+          <span class="duration" style="color: white;">July 2018 — Present</span>
+        </div>
     <div class="timeline-subheader">
   <a href="https://iitr.ac.in/Centres/Centre%20for%20Nanotechnology/Home.html" 
      target="_blank" 
@@ -1037,7 +1040,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="timeline-intro"style="text-align: justify;">
     Conducted advanced research on the design, synthesis, and application of functional nanostructures for light- and ultrasound-triggered antimicrobial/anticancer therapies, biosensing, and photocatalysis, with a strong focus on eco-friendly healthcare and sustainable energy solutions. This work encompassed pioneering green synthesis methods, integrating nanomaterials with biological systems, employing advanced analytical techniques, and leveraging machine learning for material optimization.
 </p>
-
 <h5 class="key-achievements-title">
   <span class="trophy-icon">🏆</span> Key Research Achievements:
 </h5>
@@ -1071,13 +1073,20 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="text"><strong>Leadership & Collaboration</strong> – Mentored junior researchers, ensured lab safety compliance, and contributed to grant proposals, project planning, and scientific publications.</span>
     </li>
 </ul>
+      </div>
+    </div>
   </li>
 
   <li class="timeline-item">
-    <div class="timeline-header">
-      <span class="position" style="color: white;">Industrial Research Trainee</span>
-      <span class="duration" style="color: white;">May 2017 — Jul 2017</span>
-    </div>
+    <div class="timeline-entry">
+      <a href="https://niper.gov.in/technology-development-centre-tdc-dosage-form-formulation-gmp-manufacturing-pilot-plant-facility" target="_blank">
+        <img class="timeline-logo" src="./assets/images/logo-2-color.png" alt="NIPER Logo">
+      </a>
+      <div class="timeline-info">
+        <div class="timeline-header">
+          <span class="position" style="color: white; font-size: 1.1em; font-weight: bold;">Industrial Research Trainee</span>
+          <span class="duration" style="color: white;">May 2017 — Jul 2017</span>
+        </div>
     <div class="timeline-subheader">
       <a href="https://niper.gov.in/technology-development-centre-tdc-dosage-form-formulation-gmp-manufacturing-pilot-plant-facility" 
          target="_blank" class="institute">
@@ -1120,13 +1129,20 @@ document.addEventListener("DOMContentLoaded", function () {
     
   </li>
   </ul>
+      </div>
+    </div>
   </li>
 
     <li class="timeline-item">
-    <div class="timeline-header">
-      <span class="position" style="color: white;">Master's Research Fellow</span>
-      <span class="duration" style="color: white;">Aug 2016 — Jun 2018</span>
-    </div>
+    <div class="timeline-entry">
+      <a href="https://niper.gov.in/" target="_blank">
+        <img class="timeline-logo" src="./assets/images/logo-2-color.png" alt="NIPER Logo">
+      </a>
+      <div class="timeline-info">
+        <div class="timeline-header">
+          <span class="position" style="color: white; font-size: 1.1em; font-weight: bold;">Master's Research Fellow</span>
+          <span class="duration" style="color: white;">Aug 2016 — Jun 2018</span>
+        </div>
     <div class="timeline-subheader">
       <!-- Example with link -->
       <a href="https://niper.gov.in/" target="_blank" class="institute">
@@ -1137,7 +1153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="timeline-intro" style="text-align: justify;">
     Investigated bioactive carbohydrate- and peptide-based therapeutics within phytomedicine, focusing on enhancing bioavailability, efficacy, and targeted delivery for managing diabetes and antimicrobial resistance. Research integrated natural product chemistry, glyconanotechnology, computational chemistry, and advanced analytical characterization techniques.
 </p>
-
 <h5 class="key-achievements-title">
   <span class="trophy-icon">🏆</span> Key Research Achievements:
 </h5>
@@ -1159,14 +1174,21 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="text"><strong>Computational Chemistry</strong> – Applied molecular docking and structure–activity relationship (SAR) modeling to evaluate interaction profiles of plant-derived compounds with target enzymes.</span>
     </li>
 </ul>
+      </div>
+    </div>
   </li>
   
 
   <li class="timeline-item">
-    <div class="timeline-header">
-      <span class="position" style="color: white;">Undergraduate Researcher</span>
-      <span class="duration" style="color: white;">Aug 2015 — April 2016</span>
-    </div>
+    <div class="timeline-entry">
+      <a href="https://dhsgsu.edu.in/index.php/en/departments01/pharmaceutical-sciences" target="_blank">
+        <img class="timeline-logo" src="./assets/images/logo-1-color.png" alt="DOPS Logo">
+      </a>
+      <div class="timeline-info">
+        <div class="timeline-header">
+          <span class="position" style="color: white; font-size: 1.1em; font-weight: bold;">Undergraduate Researcher</span>
+          <span class="duration" style="color: white;">Aug 2015 — April 2016</span>
+        </div>
     <div class="timeline-subheader">
   <a href="https://dhsgsu.edu.in/index.php/en/departments01/pharmaceutical-sciences" 
      target="_blank" 
@@ -1177,7 +1199,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="timeline-intro" style="text-align: justify;">
     Investigated diverse methods for formulating nanoemulsions and evaluated their multifunctional applications across pharmaceuticals, cosmetics, and food industries. Focused on optimizing formulation parameters to achieve stability, efficiency, and enhanced performance for targeted applications.
 </p>
-
 <h5 class="key-achievements-title">
   <span class="trophy-icon">🏆</span> Key Research Achievements:
 </h5>
@@ -1194,7 +1215,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="icon">🍽</span>
         <span class="text"><strong>Food Industry Solutions</strong> – Designed functional food nanoemulsions for improved nutrient stability, controlled release, and product shelf-life.</span>
     </li>
- </ol>
+  </ul>
+      </div>
+    </div>
+  </li>
+</ol>
 
         </section>
         <section class="timeline">
@@ -2446,7 +2471,8 @@ and targeted nanomaterials for healthcare.
                     <li class="blog-post-item">
                         <a href="https://www.iitr.ac.in/vigyanbhawan/" target="blank">
     
-                            <img src="./assets/images/Vigyan Bhawan.png" alt="Vigyan Bhawan website" loading="lazy">
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/Vigyan Bhawan.png" alt="Vigyan Bhawan website" loading="lazy">
                             </figure>
     
                             <div class="blog-content">
@@ -2471,7 +2497,8 @@ and targeted nanomaterials for healthcare.
                     <li class="blog-post-item">
                         <a href="https://pubs.acs.org/cms/10.1021/inocaj.2022.61.issue-3/asset/inocaj.2022.61.issue-3.xlargecover-2.jpg" target="blank">
     
-                            <img src="./assets/images/IC.jpg" alt="IC cover design" loading="lazy">
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/IC.jpg" alt="IC cover design" loading="lazy">
                             </figure>
     
                             <div class="blog-content">
@@ -2494,7 +2521,8 @@ and targeted nanomaterials for healthcare.
                       <li class="blog-post-item">
                         <a href="https://www.instagram.com/p/CkQrxgkLZW9/" target="blank">
     
-                              <img src="./assets/images/Nanoartography.png" alt="Finalist of NanoArtography" loading="lazy">
+                              <figure class="blog-banner-box">
+                                  <img src="./assets/images/Nanoartography.png" alt="Finalist of NanoArtography" loading="lazy">
                               </figure>
       
                               <div class="blog-content">
@@ -2727,15 +2755,15 @@ and targeted nanomaterials for healthcare.
 
 <p class="timeline-text1">
     <i class="fas fa-map-marker-alt"></i>&nbsp; Centre for Nanotechnology,<br>
-    <span style="margin-left: 25px;">Indian Institute of Technology (IIT) Roorkee,</span>
-    <span style="margin-left: 25px;">Roorkee, Uttarakhand, 247667</span>
-    <i class="fas fa-envelope"></i>&nbsp; E-mail- pradeep.thakur1995@gmail.com <br>
-    <i class="fas fa-mobile-alt"></i>&nbsp; Mobile- +91-90745222468<br>
+    <span style="margin-left: 25px; display: inline-block;">Indian Institute of Technology (IIT) Roorkee,</span><br>
+    <span style="margin-left: 25px; display: inline-block;">Roorkee, Uttarakhand, 247667</span><br><br>
+    <i class="fas fa-envelope"></i>&nbsp; E-mail: pradeep.thakur1995@gmail.com <br>
+    <i class="fas fa-mobile-alt"></i>&nbsp; Mobile: +91-90745222468<br>
     <!-- Adding line break for space between email and mobile number -->
     <br>
 </p>
 
-        <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=centre%20of%20nanotechnology&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 800px; height: 400px;"></iframe><style>.mapouter{position:relative;height:400px;width:800px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org">blooket join</a><style>.gmap_canvas{overflow:hidden;height:400px;width:800px}.gmap_canvas iframe{position:relative;z-index:2}</style></div>
+        <div class="mapouter" style="width: 100%;"><div class="gmap_canvas" style="width: 100%;"><iframe src="https://maps.google.com/maps?q=Centre%20of%20Nanotechnology,%20IIT%20Roorkee&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px; border-radius: 12px;"></iframe><style>.mapouter{position:relative;height:400px;width:100%;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org">blooket join</a><style>.gmap_canvas{overflow:hidden;height:400px;width:100%}.gmap_canvas iframe{position:relative;z-index:2}</style></div>
       </article>
 
     </div>
