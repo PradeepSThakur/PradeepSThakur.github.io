@@ -188,6 +188,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
 
+    // Close the sidebar on mobile after clicking a link
+    if (window.innerWidth < 1024) {
+      sidebar.classList.remove("active");
+    }
+
   });
 }
 
@@ -231,20 +236,36 @@ document.addEventListener('DOMContentLoaded', function () {
   // Apply transition initially
   wrapper.style.transition = 'transform 0.5s ease-in-out';
 
-  // Auto-slide every 2s
-  setInterval(nextSlide, 2000);
+  // Auto-slide logic
+  let slideInterval;
+  function startAutoSlide() {
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 2000);
+    isPaused = false;
+  }
 
-  // Pause on click
+  function stopAutoSlide() {
+    if (slideInterval) clearInterval(slideInterval);
+    isPaused = true;
+  }
+
+  startAutoSlide();
+
+  // Pause/Play toggle on click
   const allItems = document.querySelectorAll('.carousel-item');
   allItems.forEach(item => {
     item.addEventListener('click', function () {
-      isPaused = !isPaused;
+      if (isPaused) {
+        startAutoSlide(); // Resume if paused
+      } else {
+        stopAutoSlide(); // Pause if running
+      }
     });
   });
 
-  // Manual navigation
-  document.querySelector('.next').addEventListener('click', function () {
-    if (!isPaused) isPaused = true;
+  // Manual navigation (using specific .carousel selectors)
+  document.querySelector('.carousel .next').addEventListener('click', function () {
+    startAutoSlide(); // Resume sliding on click
 
     currentIndex++;
     updatePosition(currentIndex);
@@ -263,8 +284,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.querySelector('.prev').addEventListener('click', function () {
-    if (!isPaused) isPaused = true;
+  document.querySelector('.carousel .prev').addEventListener('click', function () {
+    startAutoSlide(); // Resume sliding on click
     currentIndex = (currentIndex - 1 + totalItems) % totalItems;
     updatePosition(currentIndex);
   });
