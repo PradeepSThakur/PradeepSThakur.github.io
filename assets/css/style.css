@@ -4326,4 +4326,9 @@ textarea.form-input::-webkit-resizer {
   .blog-posts-list {
     grid-template-columns: 1fr !important;
   }
+
+  /* Hide copyright in mobile dropdown */
+  .sidebar-info_more .copyright {
+    display: none;
+  }
 }
