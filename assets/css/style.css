@@ -4332,3 +4332,7 @@ textarea.form-input::-webkit-resizer {
     display: none;
   }
 }
+
+.timeline-text1 {
+    color: #C4B5FD;
+}
