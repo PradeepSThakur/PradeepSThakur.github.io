@@ -1982,6 +1982,7 @@ body {
   font-weight: normal !important;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   /* Show title mostly */
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1991,8 +1992,10 @@ body {
 
 .icon-bullets li:hover .text {
   -webkit-line-clamp: unset;
+  line-clamp: unset;
   color: #fff;
 }
+
 
 .icon-bullets .text strong {
   display: block;
@@ -4331,8 +4334,4 @@ textarea.form-input::-webkit-resizer {
   .sidebar-info_more .copyright {
     display: none;
   }
-}
-
-.timeline-text1 {
-    color: #C4B5FD;
 }
